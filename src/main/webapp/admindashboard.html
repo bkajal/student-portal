@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url(./vecteezy_abstract-gradient-pastel-blue-and-purple-background-neon_8617161-1.jpg);
+        }
+        form{
+            height: 360px;
+            width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #0f448d;
+            border-radius: 20px;
+        }
+        label{
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #0c498f;
+        }
+        input[type="text"]{
+            font-family: FontAwesome;
+            width: 27%;
+            padding: 10px;
+            border: 1px solid #62abde;
+            border-radius: 3px;
+            margin: 35px 0px 15px 390px;
+        }
+		input[type="submit"]{
+            margin: 0px 0px 0px 470px;;
+            background-color: #135de6;
+            color: white;
+            font-weight: 800;
+            padding: 15PX 40PX;
+            border: none;
+            border-radius: 10PX;
+        }
+        h1{
+            color: #135de6;
+            text-align: center;
+            font-size: 50px;
+            margin: 0px 0px 10px 0px;
+        }
+        nav{
+            padding: 17px;
+            background-color: #135de6;
+            margin-bottom: 20px;
+        }
+        nav ul{
+            margin-left: 900px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+        }
+        nav a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;  
+            margin-left: -800px;      
+        }
+        form a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 16px 80px ;
+            margin: 0px 0px 0px 390px;
+            background-color: #135de6;
+            border-radius: 10px;
+        }
+		form h2{
+			width: 100%;
+        	margin : -20px 0px 10px -10px;
+            color: #0c498f;
+            text-align: center;
+            background-color: white;
+            padding : 10px;
+            border-radius: 10px;
+        }
+        form p{
+        	text-align: center;
+        	color: #135de6;
+        }
+        ul{
+            margin: 0px 0px 0px 480px;
+        }
+        ul li{
+          	list-style: none;
+            display: inline-block;
+            margin-left: 20px;
+            color: #62abde;
+            font-size: 10px
+        }
+    </style>
+</head>
+<body>
+    <section id="Header">
+        <h1>Student Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="admin_operations">
+        <form action="SearchStudentById" method="post">
+            <h2>ADMIN DASHBOARD</h2>
+            <p><i class="fa fa-user-secret" aria-hidden="true"></i> Welcome Back, Admin! <br><br> You may handle Student Operations here. </p> 
+            <div>
+                <a href="studentregister.html"><i class="fa fa-user-plus" aria-hidden="true"></i> ENROLL NEW STUDENT</a>
+            </div>
+            <div>
+                <input type="text" name="fetchstudentId" placeholder="&#xf002; Enter Student ID">
+                <input type="submit" value="FIND STUDENT">
+            </div>
+        </form>
+    </section>
+    <section id="Footer">
+        <ul>
+            <li>About Us</li>
+            <li>All Rights Reserved.</li>
+        </ul>
+    </section>
+</body>
+</html>
