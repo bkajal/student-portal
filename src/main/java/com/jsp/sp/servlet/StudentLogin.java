@@ -20,7 +20,7 @@ public class StudentLogin extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Controller controller = new Controller();
-		
+		//Student Login
 		String enrollment_id = req.getParameter("fetchstudentId");
 		String password = req.getParameter("Pass");
 		int enroll_id = Integer.parseInt(enrollment_id);
@@ -158,7 +158,7 @@ public class StudentLogin extends HttpServlet{
 						+ "        <h1>Student Portal</h1>\r\n"
 						+ "        <nav>\r\n"
 						+ "            <ul>\r\n"
-						+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+						+ "                <li><a href=\"logout.jsp\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Student Logout</a></li>"
 						+ "            </ul>\r\n"
 						+ "        </nav>\r\n"
 						+ "    </section>\r\n"
@@ -205,7 +205,7 @@ public class StudentLogin extends HttpServlet{
 						+ "            <h4>Update Instructions  : <i class=\"fa fa-level-down\" aria-hidden=\"true\"></i><br>"
 						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Press EDIT button first then UPDATE.<br> "
 						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Enter Data without Spaces.<br> "
-						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Separate words by Capitals (A-Z)/ Comma (,)</h4> "
+						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Separate words by underscore (_)/ Comma (,)</h4> "
 						+ "        </form>\r\n"
 						+ "    </section>\r\n"
 						+ "    <section id=\"Footer\">\r\n"

@@ -42,6 +42,7 @@ public class SearchStudentById extends HttpServlet{
 				String s_address = foundStudent.getAddress();
 				String s_branch = foundStudent.getBranch();
 				String s_password = foundStudent.getPassword();
+				
 				PrintWriter printWriter = resp.getWriter();
 				printWriter.print("<!DOCTYPE html>\r\n"
 						+ "<html lang=\"en\">\r\n"
@@ -163,7 +164,7 @@ public class SearchStudentById extends HttpServlet{
 						+ "        <h1>Student Portal</h1>\r\n"
 						+ "        <nav>\r\n"
 						+ "            <ul>\r\n"
-						+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+						+ "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Admin Logout</a></li>\r\n"
 						+ "            </ul>\r\n"
 						+ "        </nav>\r\n"
 						+ "    </section>\r\n"
@@ -212,7 +213,7 @@ public class SearchStudentById extends HttpServlet{
 						+ "            <h4>Update Instructions  : <i class=\"fa fa-level-down\" aria-hidden=\"true\"></i><br>"
 						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Press EDIT button first then UPDATE.<br> "
 						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Enter Data without Spaces.<br> "
-						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Separate words by Capitals (A-Z)/ Comma (,)</h4> "
+						+ "            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Separate words by underscore (_)/ Comma (,)</h4> "
 						+ "        </form>\r\n"
 						+ "    </section>\r\n"
 						+ "    <section id=\"Footer\">\r\n"
@@ -351,7 +352,7 @@ public class SearchStudentById extends HttpServlet{
 			            + "        <h1>Student Portal</h1>\r\n"
 			            + "        <nav>\r\n"
 			            + "            <ul>\r\n"
-			            + "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+			            + "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Admin Logout</a></li>\r\n"
 			            + "            </ul>\r\n"
 			            + "        </nav>\r\n"
 			            + "    </section>\r\n"

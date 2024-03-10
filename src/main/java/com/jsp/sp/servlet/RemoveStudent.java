@@ -32,6 +32,7 @@ public class RemoveStudent extends HttpServlet{
 			
 			int student_id = controller.removeStudent(current_admin, studentToRemove);
 			if (student_id==-1) {
+				//Cannot Remove 1st Student
 				PrintWriter printWriter = resp.getWriter();
 				printWriter.print("<!DOCTYPE html>\r\n"
 						+ "<html lang=\"en\">\r\n"
@@ -139,19 +140,19 @@ public class RemoveStudent extends HttpServlet{
 						+ "        <h1>Student Portal</h1>\r\n"
 						+ "        <nav>\r\n"
 						+ "            <ul>\r\n"
-						+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+						+ "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Admin Logout</a></li>\r\n"
 						+ "            </ul>\r\n"
 						+ "        </nav>\r\n"
 						+ "    </section>\r\n"
 						+ "    <section id=\"admin_operations\">\r\n"
 						+ "        <form action=\"SearchStudentById\" method=\"post\">\r\n"
 						+ "            <h2>ADMIN DASHBOARD</h2>\r\n"
-						+ "            <p><i class=\"fa fa-user-times\" aria-hidden=\"true\"> </i>STUDENT with ID 1 CANNOT BE REMOVED. <br><br> Try Updating Student Data for this Id <br><br>  You may handle Student Operations here. </p> \r\n"
+						+ "            <p><i class=\"fa fa-user-times\" aria-hidden=\"true\"> </i> STUDENT with ID 1 CANNOT BE REMOVED. <br><br><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i> Try Updating Student Data for this Id <br><br>  You may handle Student Operations here. </p> \r\n"
 						+ "            <div>\r\n"
 						+ "                <a href=\"studentregister.html\"><i class=\"fa fa-user-plus\" aria-hidden=\"true\"></i> ENROLL NEW STUDENT</a>\r\n"
 						+ "            </div>\r\n"
 						+ "            <div>\r\n"
-						+ "                <input type=\"text\" name=\"fetchstudentId\" placeholder=\"&#xf002;Enter Student ID\">\r\n"
+						+ "                <input type=\"text\" name=\"fetchstudentId\" placeholder=\"&#xf002; Enter Student ID\">\r\n"
 						+ "                <input type=\"submit\" value=\"FIND STUDENT\">\r\n"
 						+ "            </div>\r\n"
 						+ "        </form>\r\n"
@@ -167,6 +168,7 @@ public class RemoveStudent extends HttpServlet{
 						+ "");	
 				
 			} else {
+				//Remove Student
 				PrintWriter printWriter = resp.getWriter();
 				printWriter.print("<!DOCTYPE html>\r\n"
 						+ "<html lang=\"en\">\r\n"
@@ -274,7 +276,7 @@ public class RemoveStudent extends HttpServlet{
 						+ "        <h1>Student Portal</h1>\r\n"
 						+ "        <nav>\r\n"
 						+ "            <ul>\r\n"
-						+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+						+ "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Admin Logout</a></li>\r\n"
 						+ "            </ul>\r\n"
 						+ "        </nav>\r\n"
 						+ "    </section>\r\n"

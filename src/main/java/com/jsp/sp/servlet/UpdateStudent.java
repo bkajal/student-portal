@@ -28,7 +28,12 @@ public class UpdateStudent extends HttpServlet{
 		String password = req.getParameter("Pass");
 		long phone_no = Long.parseLong(contact);	
 		Object enrollment_id = req.getSession().getAttribute("enrollment_id");
-		
+		System.out.println(full_name);
+		System.out.println(email);
+		System.out.println(contact);
+		System.out.println(branch);
+		System.out.println(address);
+		System.out.println(password);
 		
 		if(enrollment_id instanceof String) {
 			//Student Login
@@ -131,7 +136,7 @@ public class UpdateStudent extends HttpServlet{
 							+ "        <h1>Student Portal</h1>\r\n"
 							+ "        <nav>\r\n"
 							+ "            <ul>\r\n"
-							+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+							+ "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Student Logout</a></li>\r\n"
 							+ "            </ul>\r\n"
 							+ "        </nav>\r\n"
 							+ "    </section>\r\n"
@@ -155,7 +160,7 @@ public class UpdateStudent extends HttpServlet{
 
 			
 		} else if(enrollment_id instanceof Integer) {
-			//Admin Login
+			//Update Student through Admin Login
 			int enroll_id = (int) enrollment_id;
 			if (full_name!=null || email!=null || contact!=null || branch!=null || address!=null || password!=null) {
 				String admin_username = (String) req.getSession().getAttribute("admin_username");
@@ -279,7 +284,7 @@ public class UpdateStudent extends HttpServlet{
 							+ "        <h1>Student Portal</h1>\r\n"
 							+ "        <nav>\r\n"
 							+ "            <ul>\r\n"
-							+ "                <li><a href=\"home.html\"><i class=\"fa fa-home\" aria-hidden=\"true\"></i> Home</a></li>\r\n"
+							+ "                <li><a href=\"home.html\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Admin Logout</a></li>\r\n"
 							+ "            </ul>\r\n"
 							+ "        </nav>\r\n"
 							+ "    </section>\r\n"
@@ -287,7 +292,7 @@ public class UpdateStudent extends HttpServlet{
 							+ "        <form action=\"SearchStudentById\" method=\"post\">\r\n"
 							+ "            <h2>ADMIN DASHBOARD</h2>\r\n"
 							+ "            <p><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i> STUDENT with ID "+student_id+" UPDATED. <br><br> You may LOGIN by STUDENT. <br><br> > <i class=\"fa fa-home\" aria-hidden=\"true\"></i> GO TO HOME PAGE < <br><br> OR </p> \r\n"			            + "            <div>\r\n"
-						    + "                <input type=\"text\" name=\"fetchstudentId\" placeholder=\"&#xf002;Enter Student ID\">\r\n"
+						    + "                <input type=\"text\" name=\"fetchstudentId\" placeholder=\"&#xf002; Enter Student ID\">\r\n"
 						    + "                <input type=\"submit\" value=\"FIND STUDENT\">\r\n"
 						    + "            </div>\r\n"
 							+ "        </form>\r\n"
